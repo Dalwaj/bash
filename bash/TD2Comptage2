@@ -1,0 +1,17 @@
+#!/bin/bash
+
+let "c = 0"
+let "c2 = 0"
+for i in `ls -R`
+do
+        if [ -d $i ]
+                then
+                #echo "$i est un dossier"
+                ((c2 = c2+1))
+        else
+                #echo "$i est un fichier"
+                ((c = c+1))
+        fi
+done
+echo "Nombre de fichier : $c"
+echo "Nombre de sous-dossier : $c2"
